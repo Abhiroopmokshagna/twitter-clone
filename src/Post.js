@@ -17,23 +17,23 @@ function Post({
     return (
         <div className='post'>
             <div className="post__avatar">
-                <Avatar src = "https://avatars.githubusercontent.com/u/43064032?s=40&v=4" />
+                <Avatar src = {avatar} />
             </div>  
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Abhiroop mokshagna{" "}
+                            {displayName}{" "}
                             <span className='post__headerSpecial'>
-                                <VerifiedUserIcon className = "post__badge" /> @somebody
+                                {verified && <VerifiedUserIcon className = "post__badge" />} @{username}
                             </span>
                         </h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>I challenge you to build a twitter clone with me!!!</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://c.tenor.com/0_WKEPikh8gAAAAM/challenge-schnoedown.gif" alt="" />
+                <img src={image} alt="" />
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
